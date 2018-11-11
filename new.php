@@ -55,6 +55,7 @@ if(!empty($_POST)){
 <link rel="stylesheet" type="text/css" href=new.scc>
 <form method="POST" action="new.php">
    <div class ="">
+    <!---name--->
      <label for = "name">Name</label>
      <?php if(isset($errors['name']) && $errors['name'] == 'blank'):?>
         <p class="text-danger">require name</p>
@@ -62,6 +63,7 @@ if(!empty($_POST)){
        <br>
          <input type="name" name="input_name"  value="" id="name" class="name-form" placeholder = "Mr.SOY">
         <br>
+    <!---phone number--->
      <label for = "number">Number</label>
         <br>
      <?php if(isset($errors['number']) && $errors['number'] == 'blank'):?>
@@ -70,6 +72,7 @@ if(!empty($_POST)){
      <?php endif;?>
          <input type="tel" name="input_number" id="number"value="" placeholder="03XXXXXXXX">
          <br>
+      <!--people---->
       <label for ="people">How many people?</label>
        <br>
         <input type="number" name="input_people" value="" id="people" min=2 max=15>
@@ -77,9 +80,10 @@ if(!empty($_POST)){
       <p class = "text-danger">confirm number</p>
       <?php endif;?>
        <br>
+       <!------>
        <input type="date" name="input_date" value="" id="date">
       <?php if(isset($errors['date']) && $errors['date'] == 'blank'):?>
-      <p class = "text-danger">confirm number</p>
+      <p class = "text-danger">confirm date</p>
       <?php endif;?>
        <br>
        <select name="list">
@@ -92,7 +96,7 @@ if(!empty($_POST)){
           <option value="item7">20:30</option>
           <option value="item8">21:00</option>
        </select>
-       <?php if(isset($errors['date']) && $errors['date'] == 'blank'):?>
+       <?php if(isset($errors['time']) && $errors['time'] == 'blank'):?>
       <p class = "text-danger">confirm number</p>
       <?php endif;?>
        <br>
